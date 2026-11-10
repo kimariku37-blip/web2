@@ -1,15 +1,19 @@
-const courseStatus = document.querySelector("#course-status");
-courseStatus.textContent = "受付中";
-courseStatus.classList.add("is-open");
+const title = document.getElementById("title");
+const label = document.getElementById("label");
+const content = document.getElementById("content");
+const date = document.getElementById("date");
+const card = document.getElementById("notice-card");
 
-const courseTitle = document.querySelector("#course-title");
-courseTitle.style.color = "#1d4ed8";
-courseTitle.style.fontSize = "28px";
+title.textContent = "校内ネットワークのメンテナンスについて";
 
-const courseCard = document.querySelector("#course-card");
-courseCard.classList.remove("is-muted");
-courseCard.classList.toggle("is-featured");
+label.textContent = "重要なお知らせ";
 
-const courseDescription = document.querySelector("#course-description");
-courseDescription.textContent =
-    "JavaScriptを使って、Webページに動きを付ける方法を学びます。";
+content.innerHTML =
+  "11月10日に校内ネットワークの<strong>メンテナンス</strong>を実施します。<br>作業中はインターネットを利用できません。";
+
+date.textContent = "公開日：2026年11月3日";
+
+title.style.color = "red";
+
+label.classList.add("important-label");
+card.classList.add("is-important");

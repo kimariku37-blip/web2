@@ -1,19 +1,17 @@
-const title = document.getElementById("title");
-const label = document.getElementById("label");
-const content = document.getElementById("content");
-const date = document.getElementById("date");
-const card = document.getElementById("notice-card");
+const noticeLabel = document.querySelector('#notice-label');
+noticeLabel.textContent = '重要なお知らせ';
+noticeLabel.classList.add('label-important');
 
-title.textContent = "校内ネットワークのメンテナンスについて";
+const noticeTitle = document.querySelector('#notice-title');
+noticeTitle.textContent = '校内ネットワークのメンテナンスについて';
+noticeTitle.style.color = '#b91c1c';
 
-label.textContent = "重要なお知らせ";
+const noticeBody = document.querySelector('#notice-body');
+noticeBody.innerHTML =
+  '11月10日に校内ネットワークのメンテナンスを実施します。<br>作業中は<strong>インターネットを利用できません。</strong>';
 
-content.innerHTML =
-  "11月10日に校内ネットワークの<strong>メンテナンス</strong>を実施します。<br>作業中はインターネットを利用できません。";
+const noticeDate = document.querySelector('#notice-date');
+noticeDate.textContent = '公開日：2026年11月3日';
 
-date.textContent = "公開日：2026年11月3日";
-
-title.style.color = "red";
-
-label.classList.add("important-label");
-card.classList.add("is-important");
+const noticeCard = document.querySelector('#notice-card');
+noticeCard.classList.add('is-important');
